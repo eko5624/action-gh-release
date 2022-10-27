@@ -16,7 +16,9 @@ jobs:
       - name: Test
         run: npm run test
       - name: Format
-        run: npm run fmtcheck
+        run: |
+          npm run fmt
+          npm run fmtcheck
       # - name: "check for uncommitted changes"
       #   # Ensure no changes, but ignore node_modules dir since dev/fresh ci deps installed.
       #   run: |
